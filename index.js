@@ -14,7 +14,9 @@ app.set('view engine', 'handlebars');
 app.use('/',require(path.join(__dirname,'routes/blog.js')))
 app.use(express.static(path.join(__dirname,"static")))
 
-
+app.get('/sarthak', (req, res) => {
+  res.send('Hello World!')
+})
 
 app.listen(port, () => {
   console.log(`Blog app listening at port http://localhost:${port}`)
